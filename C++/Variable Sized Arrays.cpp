@@ -4,26 +4,28 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-#define MAX 1000
 
 
 int main() {
-    int arr1[MAX][MAX],size[MAX];
-    int n,q,s,pos1,pos2;
-    cin>>n>>q; 
-    for(int i=0;i<n;i++)
-    {
-       cin>>s;
-       for(int j=0;j<s;j++)
-       {
-            cin>>arr1[i][j];
-       } 
-        
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n;
+    int q;
+    cin >> n >> q;
+    vector<int> a[n];
+    for(int i = 0; i < n; i++){
+        int m;
+        cin >> m;
+        int o;
+        for(int j = 0; j < m; j++){
+            cin >> o;
+            a[i].push_back(o);
+        }
     }
-    for(int i=0;i<q;i++)
-    {
-        cin>>pos1>>pos2;
-        cout<<arr1[pos1][pos2]<<"\n";
+    
+    int r, s;
+    for(int k = 1; k <= q; k++){
+        cin >> r >> s;
+        cout << a[r][s] << endl;
     }
     return 0;
 }
